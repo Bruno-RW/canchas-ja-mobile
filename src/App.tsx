@@ -1,6 +1,6 @@
 import { IonApp, IonRouterOutlet, IonSplitPane, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { Redirect, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 import '@ionic/react/css/core.css';
 import '@ionic/react/css/normalize.css';
@@ -34,6 +34,7 @@ import AuthLayout from '@/layouts/AuthLayout';
 
 import NotFound from '@/pages/global/NotFound';
 
+import HomePage from '@/pages/default';
 import ProductPage from '@/pages/default/product';
 import UserPage from '@/pages/default/user';
 
@@ -79,7 +80,9 @@ const App: React.FC = () => {
             </Route>
 
             <Route exact path="/">
-              <Redirect to="/product" />
+              <DefaultLayout>
+                <HomePage />
+              </DefaultLayout>
             </Route>
 
             <Route>

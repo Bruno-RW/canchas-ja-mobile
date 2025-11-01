@@ -54,7 +54,7 @@ const LanguageDropdown = () => {
           </Button>
         </DropdownMenuTrigger>
 
-        <DropdownMenuContent align="end" className="w-[160px]">
+        <DropdownMenuContent align="end" className="w-40">
           {languages.map((language) => (
             <DropdownMenuItem
               key={language.code}

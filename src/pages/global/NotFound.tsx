@@ -1,19 +1,22 @@
-import React from 'react';
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton } from '@ionic/react';
-import { useHistory } from 'react-router-dom';
+import { IonPage, IonContent, IonButton } from "@ionic/react";
+import { useTranslation } from 'react-i18next';
 
 const NotFound: React.FC = () => {
-  const history = useHistory();
+  const { t } = useTranslation("NotFound");
+
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Not found</IonTitle>
-        </IonToolbar>
-      </IonHeader>
       <IonContent className="ion-padding">
-        <h3>Page not found</h3>
-  <IonButton onClick={() => history.push('/')}>Go home</IonButton>
+        <div className="flex items-center justify-center min-h-full">
+          <div className="flex flex-col items-center justify-center gap-y-2 py-10 px-12 sm:px-20 lg:py-16 lg:px-28">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl mb-0">404</h1>
+            <h2 className="text-xl sm:text-2xl mb-5">{t("Title")}</h2>
+
+            <IonButton className="w-full mt-2" routerLink="/" routerDirection="root">
+              {t("Button")}
+            </IonButton>
+          </div>
+        </div>
       </IonContent>
     </IonPage>
   );

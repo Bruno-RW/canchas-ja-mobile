@@ -5,6 +5,10 @@
       "RequestError": "Error de solicitud",
       "InternalError": "Error interno",
       "UnexpectedError": "Error inesperado"
+    },
+    "Form": {
+      "AditionalInfo": "Información adicional",
+      "RequiredField": "Campo obligatorio"
     }
   },
 

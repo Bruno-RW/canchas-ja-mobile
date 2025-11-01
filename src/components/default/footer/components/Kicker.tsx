@@ -8,7 +8,7 @@ import LanguageSVG from "@/public/icons/action/language.svg";
 import MoneySVG from "@/public/icons/editor/attach_money.svg";
 
 const Kicker = () => {
-  const [t, i18n] = useTranslation("Component.Default.Footer.Kicker");
+  const { t } = useTranslation("Component.Default.Footer.Kicker");
 
   return (
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-y-4 md:gap-y-0 text-brand-text-secondary">

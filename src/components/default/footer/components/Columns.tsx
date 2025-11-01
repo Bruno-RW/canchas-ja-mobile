@@ -3,7 +3,7 @@ import { IonRouterLink } from "@ionic/react";
 import { useTranslation } from 'react-i18next';
 
 const Columns = () => {
-  const [t, i18n] = useTranslation("Component.Default.Footer.Columns");
+  const { t } = useTranslation("Component.Default.Footer.Columns");
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

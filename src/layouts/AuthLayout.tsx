@@ -1,18 +1,16 @@
-import React from 'react';
-import RootLayout from './RootLayout';
-import { IonContent } from '@ionic/react';
+import { IonContent } from "@ionic/react";
 
-type Props = { children: React.ReactNode };
+interface AuthLayoutProps {
+  children: React.ReactNode;
+}
 
-const AuthLayout: React.FC<Props> = ({ children }) => {
+const AuthLayout: React.FC<AuthLayoutProps> = ({ children }) => {
   return (
-    <RootLayout title="Canchas JA - Auth">
-      <IonContent>
-        <div style={{ display: 'flex', minHeight: '60vh', alignItems: 'center', justifyContent: 'center', padding: 16 }}>
-          <div style={{ width: '100%', maxWidth: 420 }}>{children}</div>
-        </div>
-      </IonContent>
-    </RootLayout>
+    <IonContent>
+      <div className="flex flex-col justify-center gap-y-2 px-6 py-2 w-full h-full">
+        {children}
+      </div>
+    </IonContent>
   );
 };
 

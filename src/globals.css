@@ -2,6 +2,13 @@
 /* @import "tw-animate-css"; */
 
 
+/*? === === === IONIC STYLES === === === ?*/
+:root {
+  --ion-font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+
+
 /*? === === === BASE STYLES === === === ?*/
 :root, html, body {
   @apply w-full h-full scroll-smooth;

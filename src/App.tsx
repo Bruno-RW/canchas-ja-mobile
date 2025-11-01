@@ -29,8 +29,18 @@ import '@/theme/variables.css';
 
 import "@/globals.css";
 
+import DefaultLayout from '@/layouts/DefaultLayout';
+import AuthLayout from '@/layouts/AuthLayout';
+
+import NotFound from '@/pages/global/NotFound';
+
+import ProductPage from '@/pages/default/product';
+import UserPage from '@/pages/default/user';
+
+import LoginPage from '@/pages/auth/login';
+import SigninPage from '@/pages/auth/signin';
+
 import Menu from '@/components/Menu';
-import Page from '@/pages/Page';
 
 setupIonicReact();
 
@@ -42,12 +52,38 @@ const App: React.FC = () => {
           <Menu />
 
           <IonRouterOutlet id="main">
-            <Route path="/" exact={true}>
-              <Redirect to="/folder/Inbox" />
+            {/* Default area with sidebar */}
+            <Route path="/product">
+              <DefaultLayout>
+                <ProductPage />
+              </DefaultLayout>
             </Route>
-            
-            <Route path="/folder/:name" exact={true}>
-              <Page />
+
+            <Route path="/user">
+              <DefaultLayout>
+                <UserPage />
+              </DefaultLayout>
+            </Route>
+
+            {/* Auth area (login / signin) */}
+            <Route path="/login">
+              <AuthLayout>
+                <LoginPage />
+              </AuthLayout>
+            </Route>
+
+            <Route path="/signin">
+              <AuthLayout>
+                <SigninPage />
+              </AuthLayout>
+            </Route>
+
+            <Route exact path="/">
+              <Redirect to="/product" />
+            </Route>
+
+            <Route>
+              <NotFound />
             </Route>
           </IonRouterOutlet>
         </IonSplitPane>

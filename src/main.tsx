@@ -4,6 +4,8 @@ import { createRoot } from "react-dom/client";
 import i18next from "i18next";
 import { I18nextProvider } from "react-i18next";
 
+
+import ContextProvider from "@/providers/ContextProvider";
 import App from "@/App";
 
 import languagePT from "@/messages/pt.json";
@@ -26,7 +28,9 @@ const root = createRoot(container!);
 root.render(
   <React.StrictMode>
     <I18nextProvider i18n={i18next}>
-      <App />
+      <ContextProvider>
+        <App />
+      </ContextProvider>
     </I18nextProvider>
   </React.StrictMode>
 );

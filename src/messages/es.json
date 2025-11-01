@@ -1,0 +1,231 @@
+{
+  "Global": {
+    "Toast": {
+      "SendError": "Error al enviar el formulario",
+      "RequestError": "Error de solicitud",
+      "InternalError": "Error interno",
+      "UnexpectedError": "Error inesperado"
+    }
+  },
+
+  "Component": {
+    "Product": {
+      "ProductCard": {
+        "PriceUnit": "hora"
+      }
+    },
+
+    "Default": {
+      "Navbar": {
+        "SearchPlaceholder": "Buscar...",
+        "BecomeHost": "Conviértete en anfitrión",
+
+        "Others": "Otros",
+        "Profile": "Perfil",
+        "Settings": "Configuraciones",
+        "Plans": "Planes",
+        "HelpFeedback": "Ayuda y comentarios",
+
+        "Preferences": "Preferencias",
+        "Theme": "Tema",
+        "ThemeSystem": "Sistema",
+        "ThemeLight": "Claro",
+        "ThemeDark": "Oscuro",
+
+        "Language": "Idioma",
+        "LanguageEN": "Inglés",
+        "LanguageES": "Español",
+        "LanguagePT": "Portugués",
+
+        "Logout": "Cerrar sesión",
+
+        "Login": "Iniciar sesión",
+        "Signin": "Registrarse"
+      },
+
+      "Sidebar": {
+        "Account": {
+          "Title": "Cuenta",
+
+          "Profile": "Perfil",
+          "Settings": "Configuración",
+          "Security": "Seguridad",
+          "Privacy": "Privacidad",
+          "Plans": "Planes"
+        },
+
+        "Activity": {
+          "Title": "Actividad",
+
+          "Games": "Juegos",
+          "Favorites": "Favoritos",
+          "Reviews": "Reseñas",
+          "Bookings": "Reservas"
+        },
+
+        "Social": {
+          "Title": "Social",
+
+          "Friends": "Amigos",
+          "Messages": "Mensajes",
+          "Notifications": "Notificaciones"
+        },
+
+        "Support": {
+          "Title": "Soporte",
+
+          "HelpCenter": "Centro de ayuda",
+          "Contact": "Contacto"
+        }
+      },
+
+      "Footer": {
+        "Columns": {
+          "Support": {
+            "Title": "Soporte",
+
+            "Help": "Centro de ayuda",
+            "Security": "Información de seguridad",
+            "Cancel": "Opciones de cancelación",
+            "Accessibility": "Accesibilidad",
+            "Report": "Reportar un problema"
+          },
+          "Community": {
+            "Title": "Comunidad",
+
+            "Community1": "Bairro Colato",
+            "Community2": "Vila Kennedy",
+            "Community3": "Recanto Verde",
+            "Community4": "Lajeado Seco",
+            "Others": "Otras comunidades relevantes"
+          },
+          "Hosting": {
+            "Title": "Anfitriones",
+
+            "Announce": "Anuncia tu espacio",
+            "Protection": "Protección para anfitriones",
+            "Resources": "Explorar recursos para anfitriones",
+            "Security": "Cómo anunciar de forma segura"
+          },
+          "About": {
+            "Title": "Acerca de",
+
+            "AboutUs": "Sobre nosotros",
+            "News": "Noticias",
+            "Functionality": "Funcionalidades",
+            "Careers": "Carreras",
+            "Investors": "Inversores"
+          }
+        },
+
+        "Kicker": {
+          "Copyright": "© 2025 Canchas Já.",
+          "Privacy": "Privacidad",
+          "Terms": "Términos",
+          "Contact": "Contacto",
+          "Language": "Español (AR)",
+          "Currency": "ARS"
+        }
+      }
+    }
+  },
+
+  "Page": {
+    "NotFound": {
+      "Title": "Página no encontrada",
+      "Button": "Volver al inicio"
+    },
+
+    "Login": {
+      "LoginPage": {
+        "Title": "Iniciar sesión"
+      },
+      "LoginForm": {
+        "Login": "Iniciar sesión",
+        "LoggingIn": "Iniciando sesión...",
+        "Email": "Correo electrónico",
+        "Password": "Contraseña"
+      },
+      "LoginFormSchema": {
+        "emailRequired": "El correo electrónico es obligatorio",
+        "emailMin": "El correo electrónico debe tener al menos 10 caracteres",
+        "emailMax": "El correo electrónico debe tener menos de 70 caracteres",
+        "emailInvalid": "Correo electrónico inválido",
+
+        "passwordRequired": "La contraseña es obligatoria",
+        "passwordMin": "La contraseña debe tener al menos 8 caracteres",
+        "passwordMax": "La contraseña debe tener menos de 30 caracteres"
+      }
+    },
+
+    "SignIn": {
+      "SigninPage": {
+        "Title": "Crear cuenta"
+      },
+      "SigninForm": {
+        "Signin": "Crear",
+        "SigningIn": "Creando...",
+
+        "Name": "Nombre completo",
+        "Email": "Correo electrónico",
+        "Password": "Contraseña",
+        "ConfirmPassword": "Confirmar contraseña"
+      },
+      "SigninFormSchema": {
+        "nameRequired": "El nombre es obligatorio",
+        "nameMax": "El nombre debe tener menos de 70 caracteres",
+
+        "emailRequired": "El correo electrónico es obligatorio",
+        "emailMin": "El correo electrónico debe tener al menos 10 caracteres",
+        "emailMax": "El correo electrónico debe tener menos de 70 caracteres",
+        "emailInvalid": "Correo electrónico inválido",
+
+        "passwordRequired": "La contraseña es obligatoria",
+        "passwordMin": "La contraseña debe tener al menos 8 caracteres",
+        "passwordMax": "La contraseña debe tener menos de 30 caracteres",
+
+        "confirmPasswordRequired": "La contraseña es obligatoria",
+        "confirmPasswordMin": "La contraseña debe tener al menos 8 caracteres",
+        "confirmPasswordMax": "La contraseña debe tener menos de 30 caracteres",
+
+        "passwordMatch": "Las contraseñas no coinciden"
+      }
+    },
+
+    "Home": {
+      "HomePage": {
+        "SpecialDiscounts": "Descuentos especiales",
+        "BestRated": "Canchas mejor valoradas",
+        "NearYou": "Cerca de ti"
+      }
+    },
+
+    "User": {
+      "Profile": {
+        "ProfilePage": {
+          "AboutMe": "Sobre Mí",
+          "PreviousGames": "Juegos Anteriores",
+          "Edit": "Editar",
+          "Favorites": "Favoritos"
+        }
+      }
+    },
+
+    "Product": {
+      "ProductClientPage": {
+        "Share": "Compartir",
+        "Save": "Guardar",
+
+        "MostWanted": "Más buscado por los jugadores",
+        "Reviews": "Reseñas",
+        
+        "SpecialDiscount": "Descuento Especial",
+        "DiscountDuration": "por {x} horas",
+
+        "CheckIn": "Entrada",
+        "CheckOut": "Salida",
+        "BookNow": "Reservar Ahora"
+      }
+    }
+  }
+}

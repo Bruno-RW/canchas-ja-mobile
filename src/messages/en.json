@@ -1,0 +1,232 @@
+{
+  "Global": {
+    "Toast": {
+      "SendError": "Error sending form",
+      "RequestError": "Request error",
+      "InternalError": "Internal error",
+      "UnexpectedError": "Unexpected error"
+    }
+  },
+
+  "Component": {
+    "Product": {
+      "ProductCard": {
+        "PriceUnit": "hour"
+      }
+    },
+
+    "Default": {
+      "Navbar": {
+        "SearchPlaceholder": "Search...",
+        "BecomeHost": "Become a host",
+
+        "Others": "Others",
+        "Profile": "Profile",
+        "Settings": "Settings",
+        "Plans": "Plans",
+        "HelpFeedback": "Help & Feedback",
+
+        "Preferences": "Preferences",
+        "Theme": "Theme",
+        "ThemeSystem": "System",
+        "ThemeLight": "Light",
+        "ThemeDark": "Dark",
+
+        "Language": "Language",
+        "LanguageEN": "English",
+        "LanguageES": "Spanish",
+        "LanguagePT": "Portuguese",
+
+        "Logout": "Logout",
+
+        "Login": "Login",
+        "Signin": "Sign Up"
+      },
+
+      "Sidebar": {
+        "Account": {
+          "Title": "Account",
+
+          "Profile": "Profile",
+          "Settings": "Settings",
+          "Security": "Security",
+          "Privacy": "Privacy",
+          "Plans": "Plans"
+        },
+
+        "Activity": {
+          "Title": "Activity",
+
+          "Games": "Games",
+          "Favorites": "Favorites",
+          "Reviews": "Reviews",
+          "Bookings": "Bookings"
+        },
+
+        "Social": {
+          "Title": "Social",
+
+          "Friends": "Friends",
+          "Messages": "Messages",
+          "Notifications": "Notifications"
+        },
+
+        "Support": {
+          "Title": "Support",
+
+          "HelpCenter": "Help center",
+          "Contact": "Contact"
+        }
+      },
+
+      "Footer": {
+        "Columns": {
+          "Support": {
+            "Title": "Support",
+
+            "Help": "Help center",
+            "Security": "Safety information",
+            "Cancel": "Cancellation options",
+            "Accessibility": "Accessibility",
+            "Report": "Report a concern"
+          },
+          "Community": {
+            "Title": "Community",
+
+            "Community1": "Bairro Colato",
+            "Community2": "Vila Kennedy",
+            "Community3": "Recanto Verde",
+            "Community4": "Lajeado Seco",
+            "Others": "Other relevant communities"
+          },
+          "Hosting": {
+            "Title": "Hosting",
+
+            "Announce": "List your space",
+            "Protection": "Host protection",
+            "Resources": "Explore hosting resources",
+            "Security": "How to host safely"
+          },
+          "About": {
+            "Title": "About",
+
+            "AboutUs": "About us",
+            "News": "News",
+            "Functionality": "Features",
+            "Careers": "Careers",
+            "Investors": "Investors"
+          }
+        },
+
+        "Kicker": {
+          "Copyright": "© 2025 Canchas Já.",
+          "Privacy": "Privacy",
+          "Terms": "Terms",
+          "Contact": "Contact",
+
+          "Language": "English (EN)",
+          "Currency": "USD"
+        }
+      }
+    }
+  },
+
+  "Page": {
+    "NotFound": {
+      "Title": "Page not found",
+      "Button": "Return to home"
+    },
+
+    "Login": {
+      "LoginPage": {
+        "Title": "Login"
+      },
+      "LoginForm": {
+        "Login": "Login",
+        "LoggingIn": "Logging in...",
+        "Email": "E-mail",
+        "Password": "Password"
+      },
+      "LoginFormSchema": {
+        "emailRequired": "E-mail is required",
+        "emailMin": "E-mail must be at least 10 characters",
+        "emailMax": "E-mail must be less than 70 characters",
+        "emailInvalid": "Invalid e-mail",
+
+        "passwordRequired": "Password is required",
+        "passwordMin": "Password must be at least 8 characters",
+        "passwordMax": "Password must be less than 30 characters"
+      }
+    },
+
+    "SignIn": {
+      "SigninPage": {
+        "Title": "Create account"
+      },
+      "SigninForm": {
+        "Signin": "Create",
+        "SigningIn": "Creating...",
+
+        "Name": "Full name",
+        "Email": "E-mail",
+        "Password": "Password",
+        "ConfirmPassword": "Confirm password"
+      },
+      "SigninFormSchema": {
+        "nameRequired": "Nam is required",
+        "nameMax": "Name must be less than 70 characters",
+
+        "emailRequired": "E-mail is required",
+        "emailMin": "E-mail must be at least 10 characters",
+        "emailMax": "E-mail must be less than 70 characters",
+        "emailInvalid": "Invalid e-mail",
+
+        "passwordRequired": "Password is required",
+        "passwordMin": "Password must be at least 8 characters",
+        "passwordMax": "Password must be less than 30 characters",
+
+        "confirmPasswordRequired": "Password is required",
+        "confirmPasswordMin": "Password must be at least 8 characters",
+        "confirmPasswordMax": "Password must be less than 30 characters",
+
+        "passwordMatch": "Passwords doesn't match"
+      }
+    },
+
+    "Home": {
+      "HomePage": {
+        "SpecialDiscounts": "Special Discounts",
+        "BestRated": "Best Rated Courts",
+        "NearYou": "Near You"
+      }
+    },
+
+    "User": {
+      "Profile": {
+        "ProfilePage": {
+          "AboutMe": "About Me",
+          "PreviousGames": "Previous Games",
+          "Edit": "Edit",
+          "Favorites": "Favorites"
+        }
+      }
+    },
+
+    "Product": {
+      "ProductClientPage": {
+        "Share": "Share",
+        "Save": "Save",
+
+        "MostWanted": "Most wanted by players",
+        "Reviews": "Reviews",
+        
+        "SpecialDiscount": "Desconto especial",
+        "DiscountDuration": "for {x} hours",
+
+        "CheckIn": "Check-in",
+        "CheckOut": "Check-out",
+        "BookNow": "Book Now"
+      }
+    }
+  }
+}

@@ -1,7 +1,4 @@
-"use client";
-
 import { useState } from "react";
-import { useIonToast } from "@ionic/react";
 import { useTranslation } from "react-i18next";
 
 import axios, { AxiosError } from "axios";
@@ -21,11 +18,9 @@ import Button from "@/components/ui/custom/Button";
 
 const LoginForm = () => {
   const { t } = useTranslation();
-  const toastText  = (key: string) => t("Global.Toast");
-  const formText   = (key: string) => t("Page.Login.LoginForm");
-  const schemaText = (key: string) => t("Page.Login.LoginFormSchema");
-
-  const [present] = useIonToast();
+  const toastText  = (key: string) => t(`Global.Toast.${key}`);
+  const formText   = (key: string) => t(`Page.Login.LoginForm.${key}`);
+  const schemaText = (key: string) => t(`Page.Login.LoginFormSchema.${key}`);
 
   const { login } = useSession();
   const [ isLoading, setIsLoading ] = useState(false);

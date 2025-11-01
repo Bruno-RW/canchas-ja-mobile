@@ -168,7 +168,7 @@ const Sidebar: React.FC<SidebarProps> = ({
   ];
 
   return (
-    <aside className="w-full lg:w-72 flex-shrink-0 border-r border-gray-200 dark:border-gray-800">
+    <aside className="w-full lg:w-72 shrink-0 border-r border-gray-200 dark:border-gray-800">
       <nav className="flex flex-col p-2">
         {menuGroups.map((group) => {
           const isOpen = openSections.includes(group.id);
@@ -208,7 +208,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                           : "text-gray-600 dark:text-gray-400"
                       )}
                     >
-                      <Icon className="h-4 w-4 flex-shrink-0" />
+                      <Icon className="h-4 w-4 shrink-0" />
                       <span>{item.label}</span>
                     </Link>
                   );

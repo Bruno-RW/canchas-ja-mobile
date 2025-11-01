@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -10,7 +8,7 @@ import LoginForm from "@/components/forms/LoginForm";
 
 const LoginPage = () => {
   const { t } = useTranslation("Page.Login.LoginPage");
-  const { user, login } = useSession();
+  const { user } = useSession();
   const history = useHistory();
 
   useEffect(() => {

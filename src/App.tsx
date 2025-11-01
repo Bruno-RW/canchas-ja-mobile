@@ -1,7 +1,6 @@
 import { IonApp, IonRouterOutlet, IonSplitPane, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
 
 import '@ionic/react/css/core.css';
 import '@ionic/react/css/normalize.css';
@@ -46,12 +45,6 @@ import Menu from '@/components/Menu';
 setupIonicReact();
 
 const App: React.FC = () => {
-  const [t, i18n] = useTranslation("global");
-
-  const handleChangeLanguage = (lang: string) => {
-    i18n.changeLanguage(lang);
-  };
-
   return (
     <IonApp>
       <IonReactRouter>

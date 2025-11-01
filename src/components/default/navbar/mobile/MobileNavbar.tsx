@@ -48,7 +48,7 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ user, logout, isOpen, setIs
             {/* User info */}
             <div className="flex items-center space-x-3 pb-4 border-b mb-0">
               <Avatar className="h-10 w-10">
-                <AvatarFallback className="bg-gradient-to-br from-blue-500 to-green-500 text-white">
+                <AvatarFallback className="bg-linear-to-br from-blue-500 to-green-500 text-white">
                   {user.initials}
                 </AvatarFallback>
               </Avatar>

@@ -81,14 +81,14 @@ const LoginForm = () => {
       });
 
     } catch (error: unknown) {
+      isError = true;
+      
       if (error instanceof AxiosError) {
         toastMessage = `${toastText("InternalError")}: ${error.response?.data.detail}`;
-        isError = true;
       }
 
       else {
         // toastMessage = `${toastText("UnexpectedError")}: ${error}`;
-        isError = true;
       }
       
     } finally {

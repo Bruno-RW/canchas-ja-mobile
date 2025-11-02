@@ -174,7 +174,8 @@
         "Name": "Nome completo",
         "Email": "E-mail",
         "Password": "Senha",
-        "ConfirmPassword": "Confirmar senha"
+        "ConfirmPassword": "Confirmar senha",
+        "Location": "Localização"
       },
       "SigninFormSchema": {
         "nameRequired": "Nome é necessário",
@@ -193,7 +194,11 @@
         "confirmPasswordMin": "Senha deve ter pelo menos 8 caracteres",
         "confirmPasswordMax": "Senha deve ter menos que 30 caracteres",
 
-        "passwordMatch": "Senhas não correspondem"
+        "passwordMatch": "Senhas não correspondem",
+
+        "locationRequired": "Localização é necessária",
+        "locationMin": "Localização deve ter pelo menos 8 caracteres",
+        "locationMax": "Localização deve ter menos que 30 caracteres"
       }
     },
 

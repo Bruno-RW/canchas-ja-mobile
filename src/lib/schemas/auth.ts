@@ -58,7 +58,12 @@ export const getSigninFormSchema = (t: (key: string) => string) => z.object({
     .min(8, t("passwordMin"))
     .max(30, t("passwordMax")),
 
-  type: z.enum( Object.values(UserTypeEnum) ),
+  location: z
+    .string()
+    .trim()
+    .min(1, t("locationRequired"))
+    .min(8, t("locationMin"))
+    .max(60, t("locationMax"))
 })
   .refine(({ password, confirmPassword }) => password === confirmPassword, {
   message: t("passwordMatch"),
@@ -70,5 +75,5 @@ export const signinFormSchema = z.object({
   email: z.string(),
   password: z.string(),
   confirmPassword: z.string(),
-  type: z.enum( Object.values(UserTypeEnum) )
+  location: z.string()
 })

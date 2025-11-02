@@ -173,7 +173,8 @@
         "Name": "Nombre completo",
         "Email": "Correo electrónico",
         "Password": "Contraseña",
-        "ConfirmPassword": "Confirmar contraseña"
+        "ConfirmPassword": "Confirmar contraseña",
+        "Location": "Ubicación"
       },
       "SigninFormSchema": {
         "nameRequired": "El nombre es obligatorio",
@@ -192,7 +193,11 @@
         "confirmPasswordMin": "La contraseña debe tener al menos 8 caracteres",
         "confirmPasswordMax": "La contraseña debe tener menos de 30 caracteres",
 
-        "passwordMatch": "Las contraseñas no coinciden"
+        "passwordMatch": "Las contraseñas no coinciden",
+
+        "locationRequired": "La ubicación es obligatoria",
+        "locationMin": "La ubicación debe tener al menos 8 caracteres",
+        "locationMax": "La ubicación debe tener menos de 30 caracteres"
       }
     },
 

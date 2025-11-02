@@ -174,10 +174,11 @@
         "Name": "Full name",
         "Email": "E-mail",
         "Password": "Password",
-        "ConfirmPassword": "Confirm password"
+        "ConfirmPassword": "Confirm password",
+        "Location": "Location"
       },
       "SigninFormSchema": {
-        "nameRequired": "Nam is required",
+        "nameRequired": "Name is required",
         "nameMax": "Name must be less than 70 characters",
 
         "emailRequired": "E-mail is required",
@@ -193,7 +194,11 @@
         "confirmPasswordMin": "Password must be at least 8 characters",
         "confirmPasswordMax": "Password must be less than 30 characters",
 
-        "passwordMatch": "Passwords doesn't match"
+        "passwordMatch": "Passwords doesn't match",
+        
+        "locationRequired": "Location is required",
+        "locationMin": "Location must be at least 8 characters",
+        "locationMax": "Password must be less than 30 characters"
       }
     },
 

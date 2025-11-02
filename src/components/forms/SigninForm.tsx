@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -21,8 +21,8 @@ import Button from "@/components/ui/custom/Button";
 const SigninForm = () => {
   const { t } = useTranslation();
   const toastText  = (key: string) => t(`Global.Toast.${key}`);
-  const formText   = (key: string) => t(`Page.Login.SigninForm.${key}`);
-  const schemaText = (key: string) => t(`Page.Login.SigninFormSchema.${key}`);
+  const formText   = (key: string) => t(`Page.SignIn.SigninForm.${key}`);
+  const schemaText = (key: string) => t(`Page.SignIn.SigninFormSchema.${key}`);
 
   const { login } = useSession();
   const history = useHistory();
@@ -38,6 +38,7 @@ const SigninForm = () => {
       email: "",
       password: "",
       confirmPassword: "",
+      location: "",
     },
   });
 
@@ -53,11 +54,11 @@ const SigninForm = () => {
         { 
           name: data.name,
           email: data.email, 
-          type: "C",
-          password: data.password, 
-          confirmPassword: data.confirmPassword
+          password: data.password,
+          confirmPassword: data.confirmPassword,
+          location: data.location,
         },
-        { timeout: 5000 } // 5 seconds timeout
+        { timeout: 3000 }
       );
 
       if (!signinPost) {
@@ -72,22 +73,29 @@ const SigninForm = () => {
         return;
       }
 
-      const siginData = signinPost.data;
+      const payload = signinPost.data?.user ?? signinPost.data;
 
       login({
-        id: siginData.id,
-        name: siginData.name,
-        email: siginData.email,
-        type: siginData.type,
-        initials: getInitials(siginData.name),
+        id: payload.id,
+        name: payload.name,
+        email: payload.email,
+        type: payload.type,
+        initials: getInitials(payload.name),
         isLogin: true,
       });
       
       history.replace("/");
 
-    } catch (error) {
-      toastMessage = `${toastText("InternalError")}: ${error}`;
+    } catch (error: unknown) {
       isError = true;
+
+      if (error instanceof AxiosError) {
+        toastMessage = `${toastText("InternalError")}: ${error.response?.data.detail}`;
+      }
+
+      else {
+        // toastMessage = `${toastText("UnexpectedError")}: ${error}`;
+      }
       
     } finally {
       setIsLoading(false);
@@ -180,6 +188,27 @@ const SigninForm = () => {
                 </FormControl>
 
                 <FormMessage content={form.formState.errors.confirmPassword?.message} />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="location"
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <Input
+                    {...field}
+                    className="self-center"
+                    type="location"
+                    autoComplete="location"
+                    placeholder={formText("Location")}
+                    required
+                  />
+                </FormControl>
+
+                <FormMessage content={form.formState.errors.location?.message} />
               </FormItem>
             )}
           />

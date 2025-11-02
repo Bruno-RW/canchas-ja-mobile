@@ -10,13 +10,15 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const LanguageDropdown = () => {
-  const { t, i18n } = useTranslation("Component.Default.Navbar");
+  const { t, i18n } = useTranslation();
+  const text = (key: string) => t(`Component.Default.Navbar.${key}`);
+
   const locale = i18n.language;
 
   const languages = [
-    { code: "en", name: t("LanguageEN"), flag: "🇺🇸" },
-    { code: "pt", name: t("LanguagePT"), flag: "🇧🇷" },
-    { code: "es", name: t("LanguageES"), flag: "🇪🇸" },
+    { code: "en", name: text("LanguageEN"), flag: "🇺🇸" },
+    { code: "pt", name: text("LanguagePT"), flag: "🇧🇷" },
+    { code: "es", name: text("LanguageES"), flag: "🇪🇸" },
   ];
 
   const currentLanguage = languages.find(lang => lang.code === locale);
@@ -27,7 +29,7 @@ const LanguageDropdown = () => {
 
   return (
     <div className="flex items-center justify-between">
-      <span className="text-sm font-medium">{t("Language")}</span>
+      <span className="text-sm font-medium">{text("Language")}</span>
 
       <DropdownMenu modal={false}>
         <DropdownMenuTrigger asChild>

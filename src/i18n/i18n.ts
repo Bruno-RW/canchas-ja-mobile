@@ -20,6 +20,10 @@ i18n
   .init({
     resources,
     fallbackLng: 'pt',
+    defaultNS: 'translation',
+    fallbackNS: 'translation',
+    keySeparator: '.',
+    nsSeparator: ':',
     debug: false,
     interpolation: { escapeValue: false },
     react: { useSuspense: false }

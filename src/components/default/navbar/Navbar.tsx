@@ -28,7 +28,9 @@ const Navbar = () => {
   const { user, logout } = useSession();
   const [ isOpen, setIsOpen ] = useState(false);
 
-  const { t } = useTranslation("Component.Default.Navbar");
+  const { t } = useTranslation();
+  const text = (key: string) => t(`Component.Default.Navbar.${key}`);
+  
 
   return (
     <nav className="sticky flex top-0 z-50 w-full h-20 items-center justify-between p-5 border-b bg-brand-bg-primary">
@@ -63,7 +65,7 @@ const Navbar = () => {
                 <div className="flex items-center gap-2">
                   <MoreHorizontal className="h-4 w-4 text-muted-foreground" />
                   <p className="text-xs font-medium text-muted-foreground">
-                    {t("Others")}
+                    {text("Others")}
                   </p>
                 </div>
 
@@ -73,7 +75,7 @@ const Navbar = () => {
                     onClick={() => setIsOpen(false)}
                   >
                     <UserIcon className="mr-2 h-4 w-4" />
-                    {t("Profile")}
+                    {text("Profile")}
                   </IonRouterLink>
                 </Button>
 
@@ -83,7 +85,7 @@ const Navbar = () => {
                     onClick={() => setIsOpen(false)}
                   >
                     <Settings className="mr-2 h-4 w-4" />
-                    {t("Settings")}
+                    {text("Settings")}
                   </IonRouterLink>
                 </Button>
 
@@ -93,7 +95,7 @@ const Navbar = () => {
                     onClick={() => setIsOpen(false)}
                   >
                     <CreditCard className="mr-2 h-4 w-4" />
-                    {t("Plans")}
+                    {text("Plans")}
                   </IonRouterLink>
                 </Button>
 
@@ -103,7 +105,7 @@ const Navbar = () => {
                     onClick={() => setIsOpen(false)}
                   >
                     <HelpCircle className="mr-2 h-4 w-4" />
-                    {t("HelpFeedback")}
+                    {text("HelpFeedback")}
                   </IonRouterLink>
                 </Button>
               </div>
@@ -114,7 +116,7 @@ const Navbar = () => {
                   <div className="flex items-center gap-2">
                     <Sliders className="h-4 w-4 text-muted-foreground" />
                     <p className="text-xs font-medium text-muted-foreground">
-                      {t("Preferences")}
+                      {text("Preferences")}
                     </p>
                   </div>
                   <ThemeToggle />
@@ -130,7 +132,7 @@ const Navbar = () => {
                   onClick={logout}
                 >
                   <LogOut className="mr-2 h-4 w-4" />
-                  {t("Logout")}
+                  {text("Logout")}
                 </Button>
               </div>
             </>
@@ -145,7 +147,7 @@ const Navbar = () => {
                   routerLink="/login"
                   onClick={() => setIsOpen(false)}
                 >
-                  {t("Login")}
+                  {text("Login")}
                 </IonRouterLink>
               </Button>
 
@@ -154,7 +156,7 @@ const Navbar = () => {
                   routerLink="/signin"
                   onClick={() => setIsOpen(false)}
                 >
-                  {t("Signin")}
+                  {text("Signin")}
                 </IonRouterLink>
               </Button>
             </div>

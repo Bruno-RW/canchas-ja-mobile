@@ -13,12 +13,14 @@ import {
 } from "@/components/ui/tooltip";
 
 const ThemeToggle = () => {
-  const { t } = useTranslation("Component.Default.Navbar");
+  const { t } = useTranslation();
+  const text = (key: string) => t(`Component.Default.Navbar.${key}`);
+
   const { theme, setTheme } = useTheme();
 
   return (
     <div className="flex items-center justify-between">
-      <span className="text-sm font-medium">{t("Theme")}</span>
+      <span className="text-sm font-medium">{text("Theme")}</span>
 
       <TooltipProvider>
         <div className="flex items-center rounded-full border p-0.5 bg-muted/50">
@@ -39,7 +41,7 @@ const ThemeToggle = () => {
             </TooltipTrigger>
 
             <TooltipContent className="bg-background text-foreground shadow-sm">
-              <p>{t("ThemeSystem")}</p>
+              <p>{text("ThemeSystem")}</p>
             </TooltipContent>
           </Tooltip>
 
@@ -59,7 +61,7 @@ const ThemeToggle = () => {
             </TooltipTrigger>
 
             <TooltipContent className="bg-background text-foreground shadow-sm">
-              <p>{t("ThemeLight")}</p>
+              <p>{text("ThemeLight")}</p>
             </TooltipContent>
           </Tooltip>
 
@@ -79,7 +81,7 @@ const ThemeToggle = () => {
             </TooltipTrigger>
 
             <TooltipContent className="bg-background text-foreground shadow-sm">
-              <p>{t("ThemeDark")}</p>
+              <p>{text("ThemeDark")}</p>
             </TooltipContent>
           </Tooltip>
         </div>

@@ -1,7 +1,5 @@
-"use client";
-
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import axios from "axios";
@@ -21,12 +19,13 @@ import { Input } from "@/components/ui/input";
 import Button from "@/components/ui/custom/Button";
 
 const SigninForm = () => {
-  const toastText = useTranslations("Global.Toast");
-  const formText = useTranslations("Page.SignIn.SigninForm");
-  const schemaText = useTranslations("Page.SignIn.SigninFormSchema");
+  const { t } = useTranslation();
+  const toastText  = (key: string) => t(`Global.Toast.${key}`);
+  const formText   = (key: string) => t(`Page.Login.SigninForm.${key}`);
+  const schemaText = (key: string) => t(`Page.Login.SigninFormSchema.${key}`);
 
   const { login } = useSession();
-  const router = useRouter();
+  const history = useHistory();
   const { toastStyle } = useToastStyle();
   const [ isLoading, setIsLoading ] = useState(false);
 
@@ -84,7 +83,7 @@ const SigninForm = () => {
         isLogin: true,
       });
       
-      router.replace("/");
+      history.replace("/");
 
     } catch (error) {
       toastMessage = `${toastText("InternalError")}: ${error}`;

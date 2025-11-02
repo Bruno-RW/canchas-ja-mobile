@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { IonImg, IonRouterLink } from "@ionic/react";
 import { LuHeart, LuStar } from "react-icons/lu";

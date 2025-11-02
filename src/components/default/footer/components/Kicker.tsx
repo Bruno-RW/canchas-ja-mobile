@@ -5,27 +5,28 @@ import { FaFacebook, FaXTwitter, FaInstagram } from "react-icons/fa6";
 import { LuDot } from "react-icons/lu";
 
 const Kicker = () => {
-  const { t } = useTranslation("Component.Default.Footer.Kicker");
+  const { t } = useTranslation();
+  const text = (key: string) => t(`Component.Default.Footer.Kicker.${key}`);
 
   return (
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-y-4 md:gap-y-0 text-brand-text-secondary">
       {/* Left side - Copyright and links */}
       <div className="flex flex-wrap items-center justify-center gap-x-1 text-sm">
-        <span>{t("Copyright")}</span>
+        <span>{text("Copyright")}</span>
         <LuDot className="w-3" />
 
         <IonRouterLink routerLink="#" className="hover:text-brand-primary hover:underline">
-          {t("Privacy")}
+          {text("Privacy")}
         </IonRouterLink>
         <LuDot className="w-3" />
 
         <IonRouterLink routerLink="#" className="hover:text-brand-primary hover:underline">
-          {t("Terms")}
+          {text("Terms")}
         </IonRouterLink>
         <LuDot className="w-3" />
 
         <IonRouterLink routerLink="#" className="hover:text-brand-primary hover:underline">
-          {t("Contact")}
+          {text("Contact")}
         </IonRouterLink>
       </div>
 
@@ -34,12 +35,12 @@ const Kicker = () => {
         <div className="flex items-center gap-x-2 text-sm">
           <IonRouterLink routerLink="#" className="flex items-center gap-x-1 hover:text-brand-primary">
             <IonImg src="/icons/action/language.svg" alt="Language icon" />
-            <span className="font-medium underline underline-offset-[3px]">{t("Language")}</span>
+            <span className="font-medium underline underline-offset-[3px]">{text("Language")}</span>
           </IonRouterLink>
 
           <IonRouterLink routerLink="#" className="flex items-center hover:text-brand-primary">
             <IonImg src="/icons/editor/attach_money.svg" alt="Currency icon" />
-            <span className="font-medium underline underline-offset-[3px]">{t("Currency")}</span>
+            <span className="font-medium underline underline-offset-[3px]">{text("Currency")}</span>
           </IonRouterLink>
         </div>
 

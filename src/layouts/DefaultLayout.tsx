@@ -16,16 +16,13 @@ const DefaultLayout: React.FC<DefaultLayoutProps> = ({ children }) => {
             <Navbar />
           </IonCol>
 
-          <IonCol size="12" sizeMd="9">
-            <div style={{ padding: 16 }}>
-              {children}
-            </div>
+          <IonCol size="12" sizeMd="9" className="px-5">
+            {children}
           </IonCol>
 
           <IonCol>
             <Footer />
           </IonCol>
-
         </IonRow>
       </IonGrid>
     </IonContent>

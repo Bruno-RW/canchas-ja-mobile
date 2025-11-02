@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import useSession from "@/hooks/useSession";
+import useToastStyle from "@/hooks/useToastStyle";
 import { cn } from "@/lib/utils/utils";
 import { LOGIN_API_URL } from "@/lib/routes/backend";
 import { loginFormData } from "@/lib/types/forms";
@@ -23,6 +24,7 @@ const LoginForm = () => {
   const schemaText = (key: string) => t(`Page.Login.LoginFormSchema.${key}`);
 
   const { login } = useSession();
+  const { toastStyle } = useToastStyle();
   const [ isLoading, setIsLoading ] = useState(false);
 
   const submitLabel  = (isLoading ? formText("LoggingIn") : formText("Login"));
@@ -91,7 +93,7 @@ const LoginForm = () => {
       
     } finally {
       setIsLoading(false);
-      if (isError) toast.error(toastMessage);
+      if (isError) toast.error(toastMessage, toastStyle);
     }
   };
 

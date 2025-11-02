@@ -6,10 +6,8 @@ interface AuthLayoutProps {
 
 const AuthLayout: React.FC<AuthLayoutProps> = ({ children }) => {
   return (
-    <IonContent>
-      <div className="flex flex-col justify-center gap-y-2 px-6 py-2 w-full h-full">
-        {children}
-      </div>
+    <IonContent className="flex flex-col justify-center gap-y-2 px-6 py-2 w-full h-full">
+      {children}
     </IonContent>
   );
 };

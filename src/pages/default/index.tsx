@@ -15,8 +15,10 @@ import useSession from "@/hooks/useSession";
 import ProductCarousel from "@/components/product/ProcutCarousel";
 
 const HomePage = () => {
-  const { t } = useTranslation("Page.Home.HomePage");
   const { user } = useSession();
+
+  const { t } = useTranslation();
+  const text = (key: string) => t(`Page.Home.HomePage.${key}`);
 
   const [specialDiscounts, setSpecialDiscounts] = useState<Product[]>([]);
   const [bestRated, setBestRated] = useState<Product[]>([]);
@@ -44,9 +46,9 @@ const HomePage = () => {
 
   return (
     <>
-      <ProductCarousel title={t("SpecialDiscounts")} products={specialDiscounts} />
-      <ProductCarousel title={t("BestRated")} products={bestRated} />
-      { nearYou.length > 0 && <ProductCarousel title={t("NearYou")} products={nearYou} /> }
+      <ProductCarousel title={text("SpecialDiscounts")} products={specialDiscounts} />
+      <ProductCarousel title={text("BestRated")} products={bestRated} />
+      { nearYou.length > 0 && <ProductCarousel title={text("NearYou")} products={nearYou} /> }
     </>
   );
 };

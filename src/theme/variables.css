@@ -1,57 +1,90 @@
-/* For information on how to create your own theme, please see:
-http://ionicframework.com/docs/theming/ */
-
-/* src/theme/variables.css */
 :root {
-  /** primary **/
-  --ion-color-primary: var(--brand-primary);
+  /* === Brand Colors === */
+  --ion-color-primary: var(--brand-primary, #0B5381);
   --ion-color-primary-rgb: 11, 83, 129;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #0a4971;
-  --ion-color-primary-tint: #23648e;
+  --ion-color-primary-shade: var(--brand-primary-hover, #0E649E);
+  --ion-color-primary-tint: var(--brand-primary-hover, #0E649E);
 
-  /** secondary **/
-  --ion-color-secondary: var(--brand-secondary);
+  --ion-color-secondary: var(--brand-secondary, #E17100);
   --ion-color-secondary-rgb: 225, 113, 0;
   --ion-color-secondary-contrast: #ffffff;
   --ion-color-secondary-contrast-rgb: 255, 255, 255;
-  --ion-color-secondary-shade: #c66300;
-  --ion-color-secondary-tint: #e47f1a;
+  --ion-color-secondary-shade: var(--brand-secondary-hover, #D68400);
+  --ion-color-secondary-tint: var(--brand-secondary-hover, #D68400);
 
-  /** background **/
-  --ion-background-color: var(--brand-bg-primary);
-  --ion-background-color-rgb: 255,255,255;
-  --ion-text-color: var(--brand-text-primary);
-  --ion-text-color-rgb: 34,34,34;
-  --ion-border-color: var(--brand-text-tertiary);
+  /* === Light Theme (Default) === */
+  --ion-background-color: var(--brand-bg-primary, #FFFFFF);
+  --ion-background-color-rgb: 255, 255, 255;
+  
+  --ion-text-color: var(--brand-text-primary, #222222);
+  --ion-text-color-rgb: 34, 34, 34;
+  
+  --ion-border-color: var(--brand-text-tertiary, #EFEFEF);
+  
+  /* Card & Item Colors */
+  --ion-card-background: var(--brand-bg-primary, #FFFFFF);
+  --ion-item-background: var(--brand-bg-primary, #FFFFFF);
+  
+  /* Success, Info, Warning, Error */
+  --ion-color-success: var(--brand-success, #2ECC71);
+  --ion-color-info: var(--brand-info, #4A90E2);
+  --ion-color-warning: var(--brand-warning, #FFC107);
+  --ion-color-danger: var(--brand-error, #E74C3C);
 }
 
-/* Dark mode */
+/* Dark Theme */
 .ion-color-dark {
-  --ion-background-color: var(--brand-bg-primary);
-  --ion-background-color-rgb: 34,34,34;
-  --ion-text-color: var(--brand-text-primary);
-  --ion-text-color-rgb: 255,255,255;
-  --ion-border-color: var(--brand-text-tertiary);
-
-  --ion-color-step-50: #232323;
-  --ion-color-step-100: #2e2e2e;
-  --ion-color-step-150: #3a3a3a;
-  --ion-color-step-200: #454545;
-  --ion-color-step-250: #515151;
-  --ion-color-step-300: #5d5d5d;
-  --ion-color-step-350: #686868;
-  --ion-color-step-400: #747474;
-  --ion-color-step-450: #7f7f7f;
-  --ion-color-step-500: #8b8b8b;
+  /* === Dark Theme Colors === */
+  --ion-background-color: var(--brand-bg-primary, #222222);
+  --ion-background-color-rgb: 34, 34, 34;
+  
+  --ion-text-color: var(--brand-text-primary, #FFFFFF);
+  --ion-text-color-rgb: 255, 255, 255;
+  
+  --ion-border-color: var(--brand-text-tertiary, #888888);
+  
+  /* Card & Item Colors */
+  --ion-card-background: var(--brand-bg-secondary, #2A2A2A);
+  --ion-item-background: var(--brand-bg-secondary, #2A2A2A);
+  
+  /* Color steps for gradual shading */
+  --ion-color-step-50: var(--brand-bg-primary, #222222);
+  --ion-color-step-100: var(--brand-bg-secondary, #2A2A2A);
+  --ion-color-step-150: #313131;
+  --ion-color-step-200: #383838;
+  --ion-color-step-250: #404040;
+  --ion-color-step-300: #474747;
+  --ion-color-step-350: #4F4F4F;
+  --ion-color-step-400: #565656;
+  --ion-color-step-450: #5D5D5D;
+  --ion-color-step-500: var(--brand-text-tertiary, #888888);
   --ion-color-step-550: #979797;
-  --ion-color-step-600: #a2a2a2;
-  --ion-color-step-650: #aeaeae;
-  --ion-color-step-700: #b9b9b9;
-  --ion-color-step-750: #c5c5c5;
-  --ion-color-step-800: #d1d1d1;
-  --ion-color-step-850: #dcdcdc;
-  --ion-color-step-900: #e8e8e8;
-  --ion-color-step-950: #f3f3f3;
+  --ion-color-step-600: #A4A4A4;
+  --ion-color-step-650: #B1B1B1;
+  --ion-color-step-700: #BEBEBE;
+  --ion-color-step-750: var(--brand-text-secondary, #CCCCCC);
+  --ion-color-step-800: #D8D8D8;
+  --ion-color-step-850: #E5E5E5;
+  --ion-color-step-900: #F2F2F2;
+  --ion-color-step-950: var(--brand-text-primary, #FFFFFF);
+
+  /* Keep brand colors consistent in dark mode */
+  --ion-color-primary: var(--brand-primary, #0B5381);
+  --ion-color-secondary: var(--brand-secondary, #E17100);
+  --ion-color-success: var(--brand-success, #2ECC71);
+  --ion-color-info: var(--brand-info, #4A90E2);
+  --ion-color-warning: var(--brand-warning, #FFC107);
+  --ion-color-danger: var(--brand-error, #E74C3C);
+}
+
+.ion-color-muted {
+  --ion-color-base: var(--brand-text-quaternary);
+  --ion-color-contrast: var(--brand-bg-primary);
+}
+
+.ion-color-surface {
+  --ion-color-base: var(--brand-bg-secondary);
+  --ion-color-contrast: var(--brand-text-primary);
 }

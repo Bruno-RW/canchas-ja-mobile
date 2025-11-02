@@ -23,11 +23,12 @@ import "@ionic/react/css/display.css";
  * https://ionicframework.com/docs/theming/dark-mode
 */
 
-/* import '@ionic/react/css/palettes/dark.always.css'; */
-// import '@ionic/react/css/palettes/dark.class.css';
+/* import "@ionic/react/css/palettes/dark.always.css"; */
+// import "@ionic/react/css/palettes/dark.class.css";
 // import "@ionic/react/css/palettes/dark.system.css";
 
 import "@/theme/variables.css";
+import '@/theme/tailwind.css';
 
 import "@/globals.css";
 
@@ -43,7 +44,9 @@ import ProfilePage from "@/pages/default/user/profile";
 import LoginPage from "@/pages/auth/login";
 import SigninPage from "@/pages/auth/signin";
 
-setupIonicReact();
+setupIonicReact({
+  mode: "md"
+});
 
 const App: React.FC = () => {
   return (

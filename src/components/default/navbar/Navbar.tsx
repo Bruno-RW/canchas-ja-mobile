@@ -21,6 +21,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
+import Logo from "@/components/default/navbar/components/Logo";
 import ThemeToggle from "@/components/default/navbar/components/ThemeToggle";
 import LanguageDropdown from "@/components/default/navbar/components/LanguageDropdown";
 
@@ -31,9 +32,10 @@ const Navbar = () => {
   const { t } = useTranslation();
   const text = (key: string) => t(`Component.Default.Navbar.${key}`);
   
-
   return (
     <nav className="sticky flex top-0 z-50 w-full h-20 items-center justify-between p-5 border-b bg-brand-bg-primary">
+      <Logo />
+
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger asChild>
           <Button variant="ghost" size="icon" className="md:hidden">

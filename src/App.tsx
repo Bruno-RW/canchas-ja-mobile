@@ -8,7 +8,7 @@ import { IonReactRouter } from "@ionic/react-router";
 import { Route } from "react-router-dom";
 
 import "@ionic/react/css/core.css";
-import "@ionic/react/css/normalize.css";
+// import "@ionic/react/css/normalize.css";
 import "@ionic/react/css/structure.css";
 import "@ionic/react/css/typography.css";
 
@@ -20,15 +20,12 @@ import "@ionic/react/css/flex-utils.css";
 import "@ionic/react/css/display.css";
 
 /**
- * Ionic Dark Mode
- * -----------------------------------------------------
- * For more info, please see:
  * https://ionicframework.com/docs/theming/dark-mode
- */
+*/
 
 /* import '@ionic/react/css/palettes/dark.always.css'; */
-/* import '@ionic/react/css/palettes/dark.class.css'; */
-import "@ionic/react/css/palettes/dark.system.css";
+// import '@ionic/react/css/palettes/dark.class.css';
+// import "@ionic/react/css/palettes/dark.system.css";
 
 import "@/theme/variables.css";
 

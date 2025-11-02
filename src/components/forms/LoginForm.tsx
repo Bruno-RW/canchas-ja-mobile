@@ -87,7 +87,7 @@ const LoginForm = () => {
       }
 
       else {
-        toastMessage = `${toastText("UnexpectedError")}: ${error}`;
+        // toastMessage = `${toastText("UnexpectedError")}: ${error}`;
         isError = true;
       }
       

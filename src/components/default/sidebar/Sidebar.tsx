@@ -1,7 +1,5 @@
-"use client";
-
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslation } from "react-i18next";
 import {
   User,
   Settings,
@@ -18,8 +16,8 @@ import {
   ChevronRight,
   CreditCard
 } from "lucide-react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { IonRouterLink } from "@ionic/react";
+import { useLocation } from "react-router-dom";
 
 import { cn } from "@/lib/utils/utils";
 
@@ -38,8 +36,10 @@ const Sidebar: React.FC<SidebarProps> = ({
   activeTab = "about",
   onTabChange,
 }) => {
-  const t = useTranslations("Component.Default.Sidebar");
-  const pathname = usePathname();
+  const { t } = useTranslation();
+  const text = (key: string) => t(`Component.Default.Sidebar.${key}`);
+
+  const pathname = useLocation().pathname;
 
   const [openSections, setOpenSections] = useState<string[]>([
     "account",
@@ -59,35 +59,35 @@ const Sidebar: React.FC<SidebarProps> = ({
   const menuGroups = [
     {
       id: "account",
-      label: t("Account.Title"),
+      label: text("Account.Title"),
       items: [
         {
           id: "profile",
-          label: t("Account.Profile"),
+          label: text("Account.Profile"),
           icon: User,
           href: "/user/profile",
         },
         {
           id: "settings",
-          label: t("Account.Settings"),
+          label: text("Account.Settings"),
           icon: Settings,
           href: "/user/settings",
         },
         {
           id: "security",
-          label: t("Account.Security"),
+          label: text("Account.Security"),
           icon: Shield,
           href: "/user/security",
         },
         {
           id: "privacy",
-          label: t("Account.Privacy"),
+          label: text("Account.Privacy"),
           icon: Lock,
           href: "/user/privacy",
         },
           {
           id: "plans",
-          label: t("Account.Plans"),
+          label: text("Account.Plans"),
           icon: CreditCard,
           href: "/user/plans",
         },
@@ -95,29 +95,29 @@ const Sidebar: React.FC<SidebarProps> = ({
     },
     {
       id: "activity",
-      label: t("Activity.Title"),
+      label: text("Activity.Title"),
       items: [
         {
           id: "games",
-          label: t("Activity.Games"),
+          label: text("Activity.Games"),
           icon: Calendar,
           href: "/user/games",
         },
         {
           id: "favorites",
-          label: t("Activity.Favorites"),
+          label: text("Activity.Favorites"),
           icon: Heart,
           href: "/user/favorites",
         },
         {
           id: "reviews",
-          label: t("Activity.Reviews"),
+          label: text("Activity.Reviews"),
           icon: Star,
           href: "/user/reviews",
         },
         {
           id: "bookings",
-          label: t("Activity.Bookings"),
+          label: text("Activity.Bookings"),
           icon: Calendar,
           href: "/user/bookings",
         },
@@ -125,23 +125,23 @@ const Sidebar: React.FC<SidebarProps> = ({
     },
     {
       id: "social",
-      label: t("Social.Title"),
+      label: text("Social.Title"),
       items: [
         {
           id: "friends",
-          label: t("Social.Friends"),
+          label: text("Social.Friends"),
           icon: Users,
           href: "/user/friends",
         },
         {
           id: "messages",
-          label: t("Social.Messages"),
+          label: text("Social.Messages"),
           icon: MessageSquare,
           href: "/user/messages",
         },
         {
           id: "notifications",
-          label: t("Social.Notifications"),
+          label: text("Social.Notifications"),
           icon: Bell,
           href: "/user/notifications",
         },
@@ -149,17 +149,17 @@ const Sidebar: React.FC<SidebarProps> = ({
     },
     {
       id: "support",
-      label: t("Support.Title"),
+      label: text("Support.Title"),
       items: [
         {
           id: "help",
-          label: t("Support.HelpCenter"),
+          label: text("Support.HelpCenter"),
           icon: HelpCircle,
           href: "/help",
         },
         {
           id: "contact",
-          label: t("Support.Contact"),
+          label: text("Support.Contact"),
           icon: Mail,
           href: "/contact",
         },
@@ -196,9 +196,9 @@ const Sidebar: React.FC<SidebarProps> = ({
                   const isActive = activeTab === item.id || pathname.endsWith(item.href);
 
                   return (
-                    <Link
+                    <IonRouterLink
                       key={item.id}
-                      href={item.href}
+                      routerLink={item.href}
                       onClick={() => onTabChange?.(item.id)}
                       className={cn(
                         "flex items-center gap-3 px-3 py-2 ml-3 text-sm rounded-md transition-colors",
@@ -210,7 +210,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                     >
                       <Icon className="h-4 w-4 shrink-0" />
                       <span>{item.label}</span>
-                    </Link>
+                    </IonRouterLink>
                   );
                 })}
               </CollapsibleContent>

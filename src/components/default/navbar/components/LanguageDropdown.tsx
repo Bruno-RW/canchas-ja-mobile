@@ -1,7 +1,4 @@
-"use client";
-
-import { useTranslations, useLocale } from "next-intl";
-import { useRouter, usePathname } from "next/navigation";
+import { useTranslation } from "react-i18next";
 import { ChevronDown, Check } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -13,11 +10,8 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const LanguageDropdown = () => {
-  const t = useTranslations("Component.Default.Navbar");
-
-  const router = useRouter();
-  const pathname = usePathname();
-  const locale = useLocale();
+  const { t, i18n } = useTranslation("Component.Default.Navbar");
+  const locale = i18n.language;
 
   const languages = [
     { code: "en", name: t("LanguageEN"), flag: "🇺🇸" },
@@ -28,11 +22,7 @@ const LanguageDropdown = () => {
   const currentLanguage = languages.find(lang => lang.code === locale);
 
   const handleLanguageChange = (code: string) => {
-    const segments = pathname.split("/");
-    segments[1] = code;
-
-    const newPath = segments.join("/");
-    router.replace(newPath);
+    i18n.changeLanguage(code);
   };
 
   return (

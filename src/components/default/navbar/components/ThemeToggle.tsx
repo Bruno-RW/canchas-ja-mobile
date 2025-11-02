@@ -1,6 +1,4 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { useTranslation } from "react-i18next";
 import { Monitor, Moon, Sun } from "lucide-react";
 
 import useTheme from "@/hooks/useTheme";
@@ -15,7 +13,7 @@ import {
 } from "@/components/ui/tooltip";
 
 const ThemeToggle = () => {
-  const t = useTranslations("Component.Default.Navbar");
+  const { t } = useTranslation("Component.Default.Navbar");
   const { theme, setTheme } = useTheme();
 
   return (

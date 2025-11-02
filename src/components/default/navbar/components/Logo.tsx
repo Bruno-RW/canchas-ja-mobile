@@ -1,8 +1,8 @@
-import Link from "next/link";
+import { IonRouterLink } from "@ionic/react";
 
 const Logo = () => {
   return (
-    <Link href="/" className="flex items-center space-x-2">
+    <IonRouterLink routerLink="/" className="flex items-center space-x-2">
       <svg viewBox="0 0 24 24" fill="none" className="h-8 w-8 text-brand-primary">
         <path
           d="M12 2L2 7L12 12L22 7L12 2Z"
@@ -27,7 +27,7 @@ const Logo = () => {
         />
       </svg>
       <span className="font-bold text-xl text-brand-primary">Canchas Já</span>
-    </Link>
+    </IonRouterLink>
   );
 };
 

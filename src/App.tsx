@@ -41,8 +41,6 @@ import UserPage from '@/pages/default/user';
 import LoginPage from '@/pages/auth/login';
 import SigninPage from '@/pages/auth/signin';
 
-import Menu from '@/components/Menu';
-
 setupIonicReact();
 
 const App: React.FC = () => {
@@ -50,8 +48,6 @@ const App: React.FC = () => {
     <IonApp>
       <IonReactRouter>
         <IonSplitPane contentId="main">
-          <Menu />
-
           <IonRouterOutlet id="main">
             {/* Default area with sidebar */}
             <Route path="/product">

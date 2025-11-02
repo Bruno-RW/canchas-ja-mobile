@@ -4,9 +4,6 @@ import { useTranslation } from 'react-i18next';
 import { FaFacebook, FaXTwitter, FaInstagram } from "react-icons/fa6";
 import { LuDot } from "react-icons/lu";
 
-import LanguageSVG from "@/public/icons/action/language.svg";
-import MoneySVG from "@/public/icons/editor/attach_money.svg";
-
 const Kicker = () => {
   const { t } = useTranslation("Component.Default.Footer.Kicker");
 
@@ -36,12 +33,12 @@ const Kicker = () => {
       <div className="flex items-center gap-x-16">
         <div className="flex items-center gap-x-2 text-sm">
           <IonRouterLink routerLink="#" className="flex items-center gap-x-1 hover:text-brand-primary">
-            <IonImg src={LanguageSVG} alt="Language icon" />
+            <IonImg src="/icons/action/language.svg" alt="Language icon" />
             <span className="font-medium underline underline-offset-[3px]">{t("Language")}</span>
           </IonRouterLink>
 
           <IonRouterLink routerLink="#" className="flex items-center hover:text-brand-primary">
-            <IonImg src={MoneySVG} alt="Language icon" />
+            <IonImg src="/icons/editor/attach_money.svg" alt="Currency icon" />
             <span className="font-medium underline underline-offset-[3px]">{t("Currency")}</span>
           </IonRouterLink>
         </div>

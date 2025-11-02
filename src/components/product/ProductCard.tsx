@@ -38,7 +38,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
     reviews
   } = product;
 
-  const { t } = useTranslation("Component.Product.ProductCard");
+  const { t } = useTranslation();
+  const text = (key: string) => t(`Component.Product.ProductCard.${key}`);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isFavorite, setIsFavorite] = useState(false);
 
@@ -165,7 +166,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
           )}
 
           <span className="text-sm text-muted-foreground">
-            {t("PriceUnit")}
+            {text("PriceUnit")}
           </span>
         </div>
       </div>

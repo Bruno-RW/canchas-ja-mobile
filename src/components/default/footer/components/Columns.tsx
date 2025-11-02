@@ -13,19 +13,19 @@ const Columns = () => {
         <h3 className="font-medium text-gray-900 mb-3">{text("Support.Title")}</h3>
         <ul className="space-y-3 text-sm text-brand-text-secondary">
           <li>
-            <IonRouterLink routerLink="#" className="hover:text-brand-primary hover:underline">{text("Support.Help")}</IonRouterLink>
+            <IonRouterLink routerLink="#" className="text-brand-text-secondary hover:text-brand-primary hover:underline">{text("Support.Help")}</IonRouterLink>
           </li>
           <li>
-            <IonRouterLink routerLink="#" className="hover:text-brand-primary hover:underline">{text("Support.Security")}</IonRouterLink>
+            <IonRouterLink routerLink="#" className="text-brand-text-secondary hover:text-brand-primary hover:underline">{text("Support.Security")}</IonRouterLink>
           </li>
           <li>
-            <IonRouterLink routerLink="#" className="hover:text-brand-primary hover:underline">{text("Support.Cancel")}</IonRouterLink>
+            <IonRouterLink routerLink="#" className="text-brand-text-secondary hover:text-brand-primary hover:underline">{text("Support.Cancel")}</IonRouterLink>
           </li>
           <li>
-            <IonRouterLink routerLink="#" className="hover:text-brand-primary hover:underline">{text("Support.Accessibility")}</IonRouterLink>
+            <IonRouterLink routerLink="#" className="text-brand-text-secondary hover:text-brand-primary hover:underline">{text("Support.Accessibility")}</IonRouterLink>
           </li>
           <li>
-            <IonRouterLink routerLink="#" className="hover:text-brand-primary hover:underline">{text("Support.Report")}</IonRouterLink>
+            <IonRouterLink routerLink="#" className="text-brand-text-secondary hover:text-brand-primary hover:underline">{text("Support.Report")}</IonRouterLink>
           </li>
         </ul>
       </div>
@@ -35,19 +35,19 @@ const Columns = () => {
         <h3 className="font-medium text-gray-900 mb-3">{text("Community.Title")}</h3>
         <ul className="space-y-3 text-sm text-brand-text-secondary">
           <li>
-            <IonRouterLink routerLink="#" className="hover:text-brand-primary hover:underline">{text("Community.Community1")}</IonRouterLink>
+            <IonRouterLink routerLink="#" className="text-brand-text-secondary hover:text-brand-primary hover:underline">{text("Community.Community1")}</IonRouterLink>
           </li>
           <li>
-            <IonRouterLink routerLink="#" className="hover:text-brand-primary hover:underline">{text("Community.Community2")}</IonRouterLink>
+            <IonRouterLink routerLink="#" className="text-brand-text-secondary hover:text-brand-primary hover:underline">{text("Community.Community2")}</IonRouterLink>
           </li>
           <li>
-            <IonRouterLink routerLink="#" className="hover:text-brand-primary hover:underline">{text("Community.Community3")}</IonRouterLink>
+            <IonRouterLink routerLink="#" className="text-brand-text-secondary hover:text-brand-primary hover:underline">{text("Community.Community3")}</IonRouterLink>
           </li>
           <li>
-            <IonRouterLink routerLink="#" className="hover:text-brand-primary hover:underline">{text("Community.Community4")}</IonRouterLink>
+            <IonRouterLink routerLink="#" className="text-brand-text-secondary hover:text-brand-primary hover:underline">{text("Community.Community4")}</IonRouterLink>
           </li>
           <li>
-            <IonRouterLink routerLink="#" className="hover:text-brand-primary hover:underline">{text("Community.Others")}</IonRouterLink>
+            <IonRouterLink routerLink="#" className="text-brand-text-secondary hover:text-brand-primary hover:underline">{text("Community.Others")}</IonRouterLink>
           </li>
         </ul>
       </div>
@@ -57,16 +57,16 @@ const Columns = () => {
         <h3 className="font-medium text-gray-900 mb-3">{text("Hosting.Title")}</h3>
         <ul className="space-y-3 text-sm text-brand-text-secondary">
           <li>
-            <IonRouterLink routerLink="#" className="hover:text-brand-primary hover:underline">{text("Hosting.Announce")}</IonRouterLink>
+            <IonRouterLink routerLink="#" className="text-brand-text-secondary hover:text-brand-primary hover:underline">{text("Hosting.Announce")}</IonRouterLink>
           </li>
           <li>
-            <IonRouterLink routerLink="#" className="hover:text-brand-primary hover:underline">{text("Hosting.Protection")}</IonRouterLink>
+            <IonRouterLink routerLink="#" className="text-brand-text-secondary hover:text-brand-primary hover:underline">{text("Hosting.Protection")}</IonRouterLink>
           </li>
           <li>
-            <IonRouterLink routerLink="#" className="hover:text-brand-primary hover:underline">{text("Hosting.Resources")}</IonRouterLink>
+            <IonRouterLink routerLink="#" className="text-brand-text-secondary hover:text-brand-primary hover:underline">{text("Hosting.Resources")}</IonRouterLink>
           </li>
           <li>
-            <IonRouterLink routerLink="#" className="hover:text-brand-primary hover:underline">{text("Hosting.Security")}</IonRouterLink>
+            <IonRouterLink routerLink="#" className="text-brand-text-secondary hover:text-brand-primary hover:underline">{text("Hosting.Security")}</IonRouterLink>
           </li>
         </ul>
       </div>
@@ -76,19 +76,19 @@ const Columns = () => {
         <h3 className="font-medium text-gray-900 mb-3">{text("About.Title")}</h3>
         <ul className="space-y-3 text-sm text-brand-text-secondary">
           <li>
-            <IonRouterLink routerLink="#" className="hover:text-brand-primary hover:underline">{text("About.AboutUs")}</IonRouterLink>
+            <IonRouterLink routerLink="#" className="text-brand-text-secondary hover:text-brand-primary hover:underline">{text("About.AboutUs")}</IonRouterLink>
           </li>
           <li>
-            <IonRouterLink routerLink="#" className="hover:text-brand-primary hover:underline">{text("About.News")}</IonRouterLink>
+            <IonRouterLink routerLink="#" className="text-brand-text-secondary hover:text-brand-primary hover:underline">{text("About.News")}</IonRouterLink>
           </li>
           <li>
-            <IonRouterLink routerLink="#" className="hover:text-brand-primary hover:underline">{text("About.Functionality")}</IonRouterLink>
+            <IonRouterLink routerLink="#" className="text-brand-text-secondary hover:text-brand-primary hover:underline">{text("About.Functionality")}</IonRouterLink>
           </li>
           <li>
-            <IonRouterLink routerLink="#" className="hover:text-brand-primary hover:underline">{text("About.Careers")}</IonRouterLink>
+            <IonRouterLink routerLink="#" className="text-brand-text-secondary hover:text-brand-primary hover:underline">{text("About.Careers")}</IonRouterLink>
           </li>
           <li>
-            <IonRouterLink routerLink="#" className="hover:text-brand-primary hover:underline">{text("About.Investors")}</IonRouterLink>
+            <IonRouterLink routerLink="#" className="text-brand-text-secondary hover:text-brand-primary hover:underline">{text("About.Investors")}</IonRouterLink>
           </li>
         </ul>
       </div>

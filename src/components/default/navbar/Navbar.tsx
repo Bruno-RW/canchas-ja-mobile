@@ -59,20 +59,20 @@ const Navbar = () => {
                     </Avatar>
                     <div className="flex flex-col">
                       <p className="text-sm font-medium">{user.name}</p>
-                      <p className="text-xs text-muted-foreground">{user.email}</p>
+                      <p className="text-xs text-brand-text-secondary">{user.email}</p>
                     </div>
                   </div>
 
                   {/* Other pages */}
                   <div className="space-y-2 mb-0 border-b pb-4">
                     <div className="flex items-center gap-2">
-                      <MoreHorizontal className="h-4 w-4 text-muted-foreground" />
-                      <p className="text-xs font-medium text-muted-foreground">
+                      <MoreHorizontal className="h-4 w-4 text-brand-text-secondary" />
+                      <p className="text-xs font-medium text-brand-text-secondary">
                         {text("Others")}
                       </p>
                     </div>
 
-                    <Button variant="ghost" asChild className="justify-start">
+                    <Button variant="ghost" asChild className="justify-start text-brand-text-primary">
                       <IonRouterLink
                         routerLink="/user/profile"
                         onClick={() => setIsOpen(false)}
@@ -82,7 +82,7 @@ const Navbar = () => {
                       </IonRouterLink>
                     </Button>
 
-                    <Button variant="ghost" asChild className="justify-start">
+                    <Button variant="ghost" asChild className="justify-start text-brand-text-primary">
                       <IonRouterLink
                         routerLink="/user/settings"
                         onClick={() => setIsOpen(false)}
@@ -92,7 +92,7 @@ const Navbar = () => {
                       </IonRouterLink>
                     </Button>
 
-                    <Button variant="ghost" asChild className="justify-start">
+                    <Button variant="ghost" asChild className="justify-start text-brand-text-primary">
                       <IonRouterLink
                         routerLink="/user/plans"
                         onClick={() => setIsOpen(false)}
@@ -102,7 +102,7 @@ const Navbar = () => {
                       </IonRouterLink>
                     </Button>
 
-                    <Button variant="ghost" asChild className="justify-start">
+                    <Button variant="ghost" asChild className="justify-start text-brand-text-primary">
                       <IonRouterLink
                         routerLink="/help"
                         onClick={() => setIsOpen(false)}
@@ -117,8 +117,8 @@ const Navbar = () => {
                   <div className="mb-0">
                     <div className="px-2 space-y-3">
                       <div className="flex items-center gap-2">
-                        <Sliders className="h-4 w-4 text-muted-foreground" />
-                        <p className="text-xs font-medium text-muted-foreground">
+                        <Sliders className="h-4 w-4 text-brand-text-secondary" />
+                        <p className="text-xs font-medium text-brand-text-secondary">
                           {text("Preferences")}
                         </p>
                       </div>
@@ -148,8 +148,8 @@ const Navbar = () => {
                 <div className="mb-0">
                   <div className="px-2 space-y-3">
                     <div className="flex items-center gap-2">
-                      <Sliders className="h-4 w-4 text-muted-foreground" />
-                      <p className="text-xs font-medium text-muted-foreground">
+                      <Sliders className="h-4 w-4 text-brand-text-secondary" />
+                      <p className="text-xs font-medium text-brand-text-secondary">
                         {text("Preferences")}
                       </p>
                     </div>

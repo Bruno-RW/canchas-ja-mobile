@@ -51,7 +51,6 @@ const ProfilePage = () => {
 
   return (
     <div className="flex flex-col lg:flex-row gap-6 w-full h-full pb-8">
-      <Sidebar activeTab={activeTab} onTabChange={setActiveTab} />
 
       <div className="flex-1 flex flex-col gap-8 pt-2">
         {/* About Me */}
@@ -111,6 +110,8 @@ const ProfilePage = () => {
           </div>
         </section>
       </div>
+
+      <Sidebar activeTab={activeTab} onTabChange={setActiveTab} />
     </div>
   );
 };

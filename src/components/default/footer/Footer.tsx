@@ -7,7 +7,7 @@ import Kicker from "@/components/default/footer/components/Kicker";
 
 const Footer = () => {
   return (
-    <IonFooter className="bottom-0 z-50 flex flex-col w-full p-5 space-y-8 bg-brand-bg-secondary">
+    <IonFooter className="bottom-0 z-50 flex flex-col w-full pt-8 pb-5 px-5 space-y-8 bg-brand-bg-secondary">
       <Columns />
       <Separator className="bg-gray-200" />
       <Kicker />

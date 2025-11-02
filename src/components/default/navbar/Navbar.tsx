@@ -34,7 +34,7 @@ const Navbar = () => {
   const text = (key: string) => t(`Component.Default.Navbar.${key}`);
 
   return (
-    <nav className="sticky flex flex-col items-center justify-between gap-y-4 top-0 z-50 w-full h-20 p-5">
+    <nav className="sticky flex flex-col items-center justify-between gap-y-4 top-0 z-50 h-full w-full h-20 p-5 pb-0">
       <div className="flex items-center justify-between w-full">
         <Logo />
 

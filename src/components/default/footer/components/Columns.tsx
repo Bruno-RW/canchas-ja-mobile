@@ -10,7 +10,7 @@ const Columns = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {/* Suporte */}
       <div>
-        <h3 className="font-medium text-gray-900 mb-3">{text("Support.Title")}</h3>
+        <h3 className="font-medium text-gray-900 mt-0! mb-3">{text("Support.Title")}</h3>
         <ul className="space-y-3 text-sm text-brand-text-secondary">
           <li>
             <IonRouterLink routerLink="#" className="text-brand-text-secondary hover:text-brand-primary hover:underline">{text("Support.Help")}</IonRouterLink>
@@ -32,7 +32,7 @@ const Columns = () => {
 
       {/* Comunidade */}
       <div>
-        <h3 className="font-medium text-gray-900 mb-3">{text("Community.Title")}</h3>
+        <h3 className="font-medium text-gray-900 mt-0! mb-3">{text("Community.Title")}</h3>
         <ul className="space-y-3 text-sm text-brand-text-secondary">
           <li>
             <IonRouterLink routerLink="#" className="text-brand-text-secondary hover:text-brand-primary hover:underline">{text("Community.Community1")}</IonRouterLink>
@@ -54,7 +54,7 @@ const Columns = () => {
 
       {/* Hospedagem */}
       <div>
-        <h3 className="font-medium text-gray-900 mb-3">{text("Hosting.Title")}</h3>
+        <h3 className="font-medium text-gray-900 mt-0! mb-3">{text("Hosting.Title")}</h3>
         <ul className="space-y-3 text-sm text-brand-text-secondary">
           <li>
             <IonRouterLink routerLink="#" className="text-brand-text-secondary hover:text-brand-primary hover:underline">{text("Hosting.Announce")}</IonRouterLink>
@@ -73,7 +73,7 @@ const Columns = () => {
 
       {/* Sobre */}
       <div>
-        <h3 className="font-medium text-gray-900 mb-3">{text("About.Title")}</h3>
+        <h3 className="font-medium text-gray-900 mt-0! mb-3">{text("About.Title")}</h3>
         <ul className="space-y-3 text-sm text-brand-text-secondary">
           <li>
             <IonRouterLink routerLink="#" className="text-brand-text-secondary hover:text-brand-primary hover:underline">{text("About.AboutUs")}</IonRouterLink>

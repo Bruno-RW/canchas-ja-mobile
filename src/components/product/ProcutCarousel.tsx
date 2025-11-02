@@ -21,7 +21,7 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({
   products,
 }) => {
   return (
-    <section className="my-6">
+    <section>
       <Carousel
         opts={{
           align: "start",
@@ -30,7 +30,7 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({
         className="w-full"
       >
         <div className={cn("flex items-center mb-6", title ? "justify-between" : "justify-end")}>
-          {title && <h2 className="text-2xl font-semibold text-foreground">{title}</h2>}
+          {title && <h2 className="m-0! text-2xl font-semibold text-foreground">{title}</h2>}
 
           {/* Navigation Buttons */}
           <div className="flex items-center gap-2">

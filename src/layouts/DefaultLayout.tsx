@@ -16,7 +16,7 @@ const DefaultLayout: React.FC<DefaultLayoutProps> = ({ children }) => {
             <Navbar />
           </IonCol>
 
-          <IonCol size="12" sizeMd="9" className="px-5">
+          <IonCol size="12" sizeMd="9" className="pt-8 pb-10 px-5 flex flex-col gap-y-12">
             {children}
           </IonCol>
 

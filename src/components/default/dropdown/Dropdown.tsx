@@ -27,17 +27,17 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 
-interface SidebarProps {
+interface DropdownProps {
   activeTab?: string;
   onTabChange?: (tab: string) => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({
+const Dropdown: React.FC<DropdownProps> = ({
   activeTab = "about",
   onTabChange,
 }) => {
   const { t } = useTranslation();
-  const text = (key: string) => t(`Component.Default.Sidebar.${key}`);
+  const text = (key: string) => t(`Component.Default.Dropdown.${key}`);
 
   const pathname = useLocation().pathname;
 
@@ -168,8 +168,8 @@ const Sidebar: React.FC<SidebarProps> = ({
   ];
 
   return (
-    <aside className="w-full lg:w-72 shrink-0">
-      <nav className="flex flex-col space-y-3">
+    <div className="w-full lg:w-72 shrink-0">
+      <div className="flex flex-col space-y-3">
         {menuGroups.map((group) => {
           const isOpen = openSections.includes(group.id);
 
@@ -219,8 +219,8 @@ const Sidebar: React.FC<SidebarProps> = ({
             </Collapsible>
           );
         })}
-      </nav>
-    </aside>
+      </div>
+    </div>
   );
 };
-export default Sidebar;
+export default Dropdown;

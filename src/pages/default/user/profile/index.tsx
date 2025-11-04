@@ -12,7 +12,7 @@ import useSession from "@/hooks/useSession";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 
-import Sidebar from "@/components/default/sidebar/Sidebar";
+import Dropdown from "@/components/default/dropdown/Dropdown";
 import ProductCard from "@/components/product/ProductCard";
 
 const ProfilePage = () => {
@@ -111,7 +111,7 @@ const ProfilePage = () => {
         </section>
       </div>
 
-      <Sidebar activeTab={activeTab} onTabChange={setActiveTab} />
+      <Dropdown activeTab={activeTab} onTabChange={setActiveTab} />
     </div>
   );
 };

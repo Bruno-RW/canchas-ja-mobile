@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import axios, { AxiosError } from "axios";
@@ -25,7 +24,6 @@ const SigninForm = () => {
   const schemaText = (key: string) => t(`Page.SignIn.SigninFormSchema.${key}`);
 
   const { login } = useSession();
-  const history = useHistory();
   const { toastStyle } = useToastStyle();
   const [ isLoading, setIsLoading ] = useState(false);
 
@@ -84,8 +82,6 @@ const SigninForm = () => {
         isLogin: true,
       });
       
-      history.replace("/");
-
     } catch (error: unknown) {
       isError = true;
 
@@ -94,7 +90,7 @@ const SigninForm = () => {
       }
 
       else {
-        // toastMessage = `${toastText("UnexpectedError")}: ${error}`;
+        toastMessage = `${toastText("UnexpectedError")}: ${error}`;
       }
       
     } finally {

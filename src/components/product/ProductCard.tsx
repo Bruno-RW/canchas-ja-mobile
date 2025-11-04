@@ -122,7 +122,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
       </div>
 
       {/* Card Content */}
-      <div className="space-y-1">
+      <div className="space-y-1 px-2">
 
         {/* Location and Rating */}
         <div className="flex items-center justify-between">
@@ -130,7 +130,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
             {location}
           </h3>
           {rating && (
-            <div className="flex items-center gap-1">
+            <div className="flex flex-col items-center gap-1">
               <LuStar className="w-4 h-4 fill-current" />
               <span className="text-sm font-medium">{rating.toFixed(2)}</span>
             </div>

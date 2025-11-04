@@ -29,7 +29,6 @@ const SessionContextProvider: React.FC<SessionContextProviderProps> = ({ childre
       initials: user.initials,
       isLogin: true,
     });
-    history.replace("/");
   }
 
   const logout = () => {
@@ -41,7 +40,6 @@ const SessionContextProvider: React.FC<SessionContextProviderProps> = ({ childre
       initials: "",
       isLogin: false,
     });
-    history.replace("/login");
   };
 
   return (

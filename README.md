@@ -10,5 +10,5 @@
 - ``` ionic serve ```
 
 # Usuário já criado:
-- bruno_wunsch@hotmail.com
-- senha12
+- Email:bruno_wunsch@hotmail.com / guilherme.boiaski@sou.unijui.edu.br / matheus.sanaiotto@sou.unijui.edu.br
+- Snha: senha12

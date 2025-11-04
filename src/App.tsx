@@ -5,7 +5,7 @@ import {
   setupIonicReact,
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 import "@ionic/react/css/core.css";
 // import "@ionic/react/css/normalize.css";
@@ -54,42 +54,50 @@ const App: React.FC = () => {
       <IonReactRouter>
         <IonSplitPane contentId="main">
           <IonRouterOutlet id="main">
-            {/* Root layout */}
-            <Route>
-              <NotFound />
-            </Route>
+            <Switch>
+              {/* Default layout */}
+              <Route exact path="/">
+                <DefaultLayout>
+                  <HomePage />
+                </DefaultLayout>
+              </Route>
 
-            {/* Default layout */}
-            <Route exact path="/">
-              <DefaultLayout>
-                <HomePage />
-              </DefaultLayout>
-            </Route>
+              <Route exact path="/product">
+                <DefaultLayout>
+                  <ProductPage />
+                </DefaultLayout>
+              </Route>
 
-            <Route path="/product">
-              <DefaultLayout>
-                <ProductPage />
-              </DefaultLayout>
-            </Route>
+              <Route exact path="/product/:id">
+                <DefaultLayout>
+                  <ProductPage />
+                </DefaultLayout>
+              </Route>
 
-            <Route path="/user/profile">
-              <DefaultLayout>
-                <ProfilePage />
-              </DefaultLayout>
-            </Route>
+              <Route exact path="/user/profile">
+                <DefaultLayout>
+                  <ProfilePage />
+                </DefaultLayout>
+              </Route>
 
-            {/* Auth layout */}
-            <Route path="/login">
-              <AuthLayout>
-                <LoginPage />
-              </AuthLayout>
-            </Route>
+              {/* Auth layout */}
+              <Route exact path="/login">
+                <AuthLayout>
+                  <LoginPage />
+                </AuthLayout>
+              </Route>
 
-            <Route path="/signin">
-              <AuthLayout>
-                <SigninPage />
-              </AuthLayout>
-            </Route>
+              <Route exact path="/signin">
+                <AuthLayout>
+                  <SigninPage />
+                </AuthLayout>
+              </Route>
+
+              {/* Catch all route for 404 */}
+              <Route>
+                <NotFound />
+              </Route>
+            </Switch>
           </IonRouterOutlet>
         </IonSplitPane>
       </IonReactRouter>

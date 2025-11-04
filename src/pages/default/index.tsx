@@ -12,7 +12,7 @@ import { Product } from "@/lib/types/product";
 
 import useSession from "@/hooks/useSession";
 
-import ProductCarousel from "@/components/product/ProcutCarousel";
+import ProductCarousel from "@/components/product/ProductCarousel";
 
 const HomePage = () => {
   const { user } = useSession();

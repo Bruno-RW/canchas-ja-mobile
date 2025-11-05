@@ -64,7 +64,7 @@ const Navbar = () => {
                   </div>
 
                   {/* Other pages */}
-                  <div className="space-y-2 mb-0 border-b pb-4">
+                  <div className="space-y-3 mb-0 border-b pb-4">
                     <div className="flex items-center gap-2">
                       <MoreHorizontal className="h-4 w-4 text-brand-text-secondary" />
                       <p className="text-xs font-medium text-brand-text-secondary">

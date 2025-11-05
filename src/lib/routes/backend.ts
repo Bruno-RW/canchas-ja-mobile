@@ -1,6 +1,6 @@
 
 //! === === === BASE BACKEND URI === === === ?//
-export const BACKEND_URI  = "http://localhost:8000";
+export const BACKEND_URI  = "https://canchas-ja-back.onrender.com";
 
 
 //~ === === === AUTH ENDPOINTS === === === ~//

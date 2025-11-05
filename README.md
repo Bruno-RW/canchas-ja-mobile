@@ -19,3 +19,6 @@
 # Usuário já criado:
 - Email:bruno_wunsch@hotmail.com / guilherme.boiaski@sou.unijui.edu.br / matheus.sanaiotto@sou.unijui.edu.br
 - Snha: senha12
+
+# Protótipo Figma
+- Localizado no 'prototipo.zip'
